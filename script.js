@@ -97,4 +97,15 @@ document.addEventListener("DOMContentLoaded", function() {
                 console.error('Error:', error);
             });
     });
+const expandableElement = document.getElementById('expandableElement');
+const threshold = 100; // Expand/hide after scrolling 100px
+
+window.addEventListener('scroll', function() {
+  const scrollPosition = window.scrollY;
+  if (scrollPosition > threshold) {
+    expandableElement.classList.remove('hidden');
+  } else {
+    expandableElement.classList.add('hidden');
+  }
+});
 });
