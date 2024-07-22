@@ -422,7 +422,7 @@ h1, h2 {
 @media (max-width: 768px) {
   /* Adjust container width for smaller screens */
   .features-content {
-    width: 95%;
+    width: 100%;
   }
 
   /* Adjust image width for smaller screens */
