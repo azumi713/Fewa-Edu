@@ -101,7 +101,7 @@ header {
   margin-top: -80px; 
   font-size: 12px;
   transition: background-color 0.3s ease-in-out;
-  text-decoration: wavy;
+  text-decoration: none;
   }
   .navigation ul li :hover {
     background-color: rgb(12, 145, 145);
