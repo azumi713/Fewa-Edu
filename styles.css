@@ -414,7 +414,9 @@ h1, h2 {
   
   }
 
- 
+ .Greeting {
+     text-align: justify;
+ }
 /* Gallery section */
 .section.gallery {
     background-color: rgb(36, 53, 71);
