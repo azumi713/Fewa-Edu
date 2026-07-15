@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Fewa Kokusai Educational Consultancy</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@500;700&display=swap" rel="stylesheet">
+
+<!-- Our stylesheet: everything the site needs, no external CDN required -->
+<link rel="stylesheet" href="css/styles.css">
+<link rel="icon" href="images/logo.png">
+</head>
+<body class="bg-white text-navy-900 font-body antialiased">
+
+<!-- ============ HEADER ============ -->
+<header class="sticky top-0 z-50 shadow-sm">
+  <!-- Utility bar -->
+  <div class="bg-emerald-900 text-mint-50 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-1.5 flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2 font-medium">
+        <span class="stamp inline-flex items-center justify-center w-5 h-5 text-[9px] font-bold text-mint-400">✓</span>
+        <span data-i18n="topbar.badge">Nepal Government Authorized (Est. 2017)</span>
+      </div>
+      <div class="hidden md:flex items-center gap-4 text-mint-100">
+        <a href="tel:+97761570258" class="hover:text-mint-400 transition-colors">📞 977 61 570258</a>
+        <a href="mailto:info@fewaeducation.com.np" class="hover:text-mint-400 transition-colors">✉ info@fewaeducation.com.np</a>
+        <span>📍 Pokhara-4, Kaski, Nepal</span>
+      </div>
+      <button id="langToggle" class="flex items-center gap-1 bg-mint-500/20 hover:bg-mint-500/40 border border-mint-400/50 rounded-full px-3 py-1 font-semibold transition-all">
+        <span id="langLabel">EN / 日本語</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Main navbar -->
+  <div class="bg-navy-900/95 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center gap-2 group">
+          <span class="w-10 h-10 flex items-center justify-center group-hover:scale-105 transition-transform">
+            <img src="images/logo.png" class="w-full h-full object-contain" alt="Fewa Kokusai logo">
+          </span>
+          <span class="font-display font-extrabold text-white text-lg tracking-tight leading-none">Fewa Kokusai<br><span class="text-[10px] font-medium text-mint-400 tracking-wider" data-i18n="brand.sub">EDUCATIONAL CONSULTANCY</span></span>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-white/90">
+          <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
+          <div class="relative group">
+            <button class="nav-link flex items-center gap-1" data-i18n="nav.overview" type="button">Overview
+              <svg class="w-3 h-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="absolute left-0 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div class="bg-white text-navy-900 rounded-xl shadow-2xl border border-mint-100 w-56 py-2 passport-corner">
+                <span class="pc-bl"></span><span class="pc-br"></span>
+                <a href="about.html" class="block w-full text-left px-4 py-2.5 hover:bg-mint-50 text-sm font-semibold" data-i18n="nav.about">About Us</a>
+                <a href="chairman.html" class="block w-full text-left px-4 py-2.5 hover:bg-mint-50 text-sm font-semibold" data-i18n="nav.chairman">Messages From Chairman</a>
+              </div>
+            </div>
+          </div>
+          <a href="eprofile.html" class="nav-link" data-i18n="nav.eprofile">E-Profile</a>
+          <a href="courses.html" class="nav-link" data-i18n="nav.courses">Courses</a>
+          <a href="service.html" class="nav-link" data-i18n="nav.service">Service</a>
+          <a href="contact.html" class="nav-link active-link" data-i18n="nav.contact">Contact Us</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a href="https://forms.gle/hXB4zRTCv4FULYE1A" target="_blank" rel="noopener" class="hidden sm:inline-flex bg-mint-500 hover:bg-mint-600 text-white font-display font-bold text-sm px-5 py-2.5 rounded-full shadow-lg shadow-mint-500/30 hover:scale-105 transition-all" data-i18n="cta.apply">Apply Now</a>
+          <button id="mobileBtn" class="lg:hidden text-white p-2" type="button">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="lg:hidden hidden bg-navy-800 border-t border-white/10">
+      <div class="px-4 py-4 space-y-1 text-white font-semibold text-sm">
+        <a href="index.html" class="block w-full text-left py-2.5" data-i18n="nav.home">Home</a>
+        <div class="border-t border-white/10 pt-2 mt-1">
+          <p class="text-mint-400 text-xs uppercase tracking-wider mb-1" data-i18n="nav.overview">Overview</p>
+          <a href="about.html" class="block w-full text-left py-2 pl-3" data-i18n="nav.about">About Us</a>
+          <a href="chairman.html" class="block w-full text-left py-2 pl-3" data-i18n="nav.chairman">Messages From Chairman</a>
+        </div>
+        <a href="eprofile.html" class="block w-full text-left py-2.5 border-t border-white/10 mt-1" data-i18n="nav.eprofile">E-Profile</a>
+        <a href="courses.html" class="block w-full text-left py-2.5" data-i18n="nav.courses">Courses</a>
+        <a href="service.html" class="block w-full text-left py-2.5" data-i18n="nav.service">Service</a>
+        <a href="contact.html" class="block w-full text-left py-2.5" data-i18n="nav.contact">Contact Us</a>
+        <a href="https://forms.gle/hXB4zRTCv4FULYE1A" target="_blank" rel="noopener" class="w-full mt-2 bg-mint-500 hover:bg-mint-600 text-white font-display font-bold px-5 py-2.5 rounded-full" data-i18n="cta.apply">Apply Now</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+    <p class="text-mint-600 font-semibold tracking-widest text-xs sm:text-sm mb-2 text-center reveal" data-i18n="contact.eyebrow">Contact Us</p>
+    <h1 class="font-display font-extrabold text-3xl sm:text-4xl text-navy-900 mb-3 text-center reveal" data-i18n="contact.title">Let's Start Your Japan Journey</h1>
+    <p class="text-navy-900/60 mb-14 text-center max-w-2xl mx-auto reveal" data-i18n="contact.sub">Reach our Nepal or Japan office, or send an inquiry below — we respond within 24 hours.</p>
+
+    <div class="grid lg:grid-cols-2 gap-6 mb-6">
+      <div class="reveal bg-navy-900 text-white rounded-2xl p-7 space-y-4">
+        <h3 class="font-display font-bold text-mint-400 mb-1" data-i18n="contact.nepal.title">Nepal Office</h3>
+        <div class="flex items-start gap-3">
+          <span class="text-mint-400 mt-0.5"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg></span>
+          <p class="text-white/80 text-sm">Pokhara Metropolitan City-4, Kaski, Gandaki, Nepal</p>
+        </div>
+        <a href="tel:+97761570258" class="flex items-center gap-3 hover:text-mint-400 transition-colors">
+          <span class="text-mint-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></span>
+          <span class="text-white/80 text-sm">977 61 570258</span>
+        </a>
+        <a href="mailto:fewaeducation@gmail.com" class="flex items-center gap-3 hover:text-mint-400 transition-colors">
+          <span class="text-mint-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></span>
+          <span class="text-white/80 text-sm">fewaeducation@gmail.com</span>
+        </a>
+        <a href="mailto:info@fewaeducation.com.np" class="flex items-center gap-3 hover:text-mint-400 transition-colors">
+          <span class="text-mint-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></span>
+          <span class="text-white/80 text-sm">info@fewaeducation.com.np</span>
+        </a>
+        <a href="https://wa.me/818039014835" target="_blank" rel="noopener" class="mt-2 flex items-center justify-center gap-2 bg-mint-500 hover:bg-mint-600 text-white font-display font-bold py-3 rounded-full transition-colors">
+          <span data-i18n="contact.whatsapp">WhatsApp Fast-Track Support</span>
+        </a>
+      </div>
+
+      <div class="reveal bg-emerald-900 text-white rounded-2xl p-7 space-y-4">
+        <h3 class="font-display font-bold text-mint-400 mb-1" data-i18n="contact.japan.title">Japan Office</h3>
+        <div class="flex items-start gap-3">
+          <span class="text-mint-400 mt-0.5"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg></span>
+          <p class="text-white/80 text-sm">Nishi Ward, Fukuoka, Japan</p>
+        </div>
+        <a href="tel:+818039014835" class="flex items-center gap-3 hover:text-mint-400 transition-colors">
+          <span class="text-mint-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></span>
+          <span class="text-white/80 text-sm">+81 80 3901 4835</span>
+        </a>
+        <a href="mailto:fewaeducation@gmail.com" class="flex items-center gap-3 hover:text-mint-400 transition-colors">
+          <span class="text-mint-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></span>
+          <span class="text-white/80 text-sm">fewaeducation@gmail.com</span>
+        </a>
+        <a href="mailto:info@fewaeducation.com.np" class="flex items-center gap-3 hover:text-mint-400 transition-colors">
+          <span class="text-mint-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></span>
+          <span class="text-white/80 text-sm">info@fewaeducation.com.np</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-6">
+      <div class="reveal bg-white border border-navy-100 rounded-2xl p-7">
+        <h3 class="font-display font-bold text-navy-900 mb-4" data-i18n="contact.map.title">Find Us in Pokhara</h3>
+        <div class="rounded-xl overflow-hidden border border-navy-100 aspect-video">
+          <iframe class="w-full h-full" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3538.7845641229036!2d83.9854883!3d28.2239315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995950077f45287%3A0xec4460f9fd5f104e!2sFewa%20Kokusai%20Educational%20Consultancy%20Pvt.%20Ltd.!5e0!3m2!1sen!2snp"></iframe>
+        </div>
+      </div>
+
+     <div class="reveal bg-mist rounded-2xl p-7">
+    <h3 class="font-display font-bold text-navy-900 mb-5" data-i18n="contact.form.title">
+        Student Inquiry Form
+    </h3>
+
+<form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+        <!-- FormSubmit Settings -->
+    <input type="hidden" name="access_key" value="70e6d3bf-3ab9-4bbf-9965-7e7a9daa916b">
+    <input type="hidden" name="subject" value="New Student Inquiry">
+    <input type="hidden" name="from_name" value="Fewa Kokusai Website">
+    <input type="hidden" name="redirect" value="https://yourwebsite.com/thank-you.html">
+        <!-- Optional: Redirect after submit -->
+        <!-- <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html"> -->
+
+        <input
+            required
+            type="text"
+            name="Full Name"
+            data-i18n-ph="contact.form.name"
+            placeholder="Full Name"
+            class="w-full border border-navy-100 rounded-lg px-4 py-3 text-sm outline-none transition-all bg-white">
+
+        <input
+            required
+            type="tel"
+            name="Phone Number"
+            data-i18n-ph="contact.form.phone"
+            placeholder="Phone Number"
+            class="w-full border border-navy-100 rounded-lg px-4 py-3 text-sm outline-none transition-all bg-white">
+
+        <input
+            type="month"
+            name="Preferred Intake Month"
+            data-i18n-ph="contact.form.intake"
+            class="w-full border border-navy-100 rounded-lg px-4 py-3 text-sm outline-none transition-all bg-white text-navy-900/70">
+
+        <select
+            name="Japanese Level"
+            class="w-full border border-navy-100 rounded-lg px-4 py-3 text-sm outline-none transition-all bg-white text-navy-900/70">
+
+            <option data-i18n="contact.form.level.none">No Prior Knowledge</option>
+            <option data-i18n="contact.form.level.n5">N5 Level</option>
+            <option data-i18n="contact.form.level.n4">N4 Level</option>
+            <option data-i18n="contact.form.level.n3">N3 or Above</option>
+
+        </select>
+
+        <textarea
+            rows="3"
+            name="Message"
+            data-i18n-ph="contact.form.message"
+            placeholder="Your Message"
+            class="w-full border border-navy-100 rounded-lg px-4 py-3 text-sm outline-none transition-all bg-white resize-none"></textarea>
+
+        <button
+            type="submit"
+            class="w-full bg-navy-900 hover:bg-emerald-900 text-white font-display font-bold py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
+
+            <span id="contactSpinner" class="hidden w-4 h-4 border-2 border-white/30 rounded-full spinner"></span>
+
+            <span data-i18n="contact.form.submit">
+                Send Inquiry
+            </span>
+
+        </button>
+
+    </form>
+</div>
+</section>
+<div id="contactSuccessModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-navy-900/70 backdrop-blur-sm">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-sm w-full p-8 text-center passport-corner animate-fadeUp">
+        <span class="pc-bl"></span><span class="pc-br"></span>
+        <div class="stamp w-16 h-16 mx-auto flex items-center justify-center text-2xl text-mint-600 mb-4">✓</div>
+        <h3 class="font-display font-extrabold text-xl text-navy-900 mb-2">
+            Inquiry Received!
+        </h3>
+        <p class="text-navy-900/60 text-sm mb-6">
+            Thank you for reaching out. A Fewa Kokusai counselor will contact you within 24 hours.
+        </p>
+        <button onclick="document.getElementById('contactSuccessModal').classList.add('hidden')"
+            class="bg-navy-900 text-white font-semibold px-6 py-2.5 rounded-full"
+            type="button">
+            OK
+        </button>
+    </div>
+</div>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-navy-900 text-white/80 mt-0">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 text-sm">
+    <div>
+      <div class="flex items-center gap-2 mb-4">
+        <span class="w-10 h-10 flex items-center justify-center">
+          <img src="images/logo.png" class="w-full h-full object-contain" alt="Fewa Kokusai logo">
+        </span>
+        <span class="font-display font-extrabold text-white" data-i18n="brand.name">Fewa Kokusai</span>
+      </div>
+      <p class="leading-relaxed text-white/60 mb-4" data-i18n="footer.about">Since 2017, Fewa Kokusai Educational Consultancy has guided students from Pokhara toward accredited Japanese language academies and universities, backed by full Nepal Government authorization and a proven visa track record.</p>
+      <p class="text-mint-400 text-xs font-semibold mb-3" data-i18n="footer.reg">Reg. No.  1409/074/075 · MOE Certified Consultancy</p>
+      <div class="flex gap-3">
+        <a href="https://www.facebook.com/Fewaedu?locale=ja_JP" target="_blank" rel="noopener" aria-label="Facebook" class="w-9 h-9 rounded-full bg-white/10 hover:bg-mint-500 flex items-center justify-center transition-colors">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12.07C22 6.5 17.52 2 12 2S2 6.5 2 12.07c0 5 3.66 9.15 8.44 9.93v-7.02H7.9v-2.91h2.54V9.85c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22c4.78-.78 8.44-4.93 8.44-9.93z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/fewaeducation/" target="_blank" rel="noopener" aria-label="Instagram" class="w-9 h-9 rounded-full bg-white/10 hover:bg-mint-500 flex items-center justify-center transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://www.youtube.com/@FewaEducation" target="_blank" rel="noopener" aria-label="YouTube" class="w-9 h-9 rounded-full bg-white/10 hover:bg-mint-500 flex items-center justify-center transition-colors">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M22.5 6.2a2.8 2.8 0 00-2-2C18.9 3.7 12 3.7 12 3.7s-6.9 0-8.5.5a2.8 2.8 0 00-2 2A29 29 0 001 12a29 29 0 00.5 5.8 2.8 2.8 0 002 2c1.6.5 8.5.5 8.5.5s6.9 0 8.5-.5a2.8 2.8 0 002-2A29 29 0 0023 12a29 29 0 00-.5-5.8zM9.8 15.4V8.6l6 3.4-6 3.4z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <h4 class="font-display font-bold text-white mb-4" data-i18n="footer.nav">Quick Navigation</h4>
+      <ul class="space-y-2.5">
+        <li><a href="index.html" class="hover:text-mint-400 transition-colors" data-i18n="nav.home">Home</a></li>
+        <li><a href="about.html" class="hover:text-mint-400 transition-colors" data-i18n="nav.about">Overview</a></li>
+        <li><a href="eprofile.html" class="hover:text-mint-400 transition-colors" data-i18n="nav.eprofile">E-Profile</a></li>
+        <li><a href="courses.html" class="hover:text-mint-400 transition-colors" data-i18n="nav.courses">Courses</a></li>
+        <li><a href="service.html" class="hover:text-mint-400 transition-colors" data-i18n="nav.service">Service</a></li>
+        <li><a href="contact.html" class="hover:text-mint-400 transition-colors" data-i18n="nav.contact">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-display font-bold text-white mb-4" data-i18n="footer.programs">Our Programs</h4>
+      <ul class="space-y-2.5 text-white/70">
+        <li data-i18n="course.1.title">Basic Japanese Language I</li>
+        <li data-i18n="course.2.title">Basic Japanese Language II</li>
+        <li data-i18n="course.3.title">Intermediate Japanese Language Course</li>
+        <li data-i18n="course.4.title">Advance Japanese Language Course</li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-display font-bold text-white mb-4" data-i18n="footer.contact">Official Contact</h4>
+      <p class="text-mint-400 font-semibold text-xs uppercase tracking-wide mb-1.5" data-i18n="footer.nepal.title">Nepal Office</p>
+      <ul class="space-y-1.5 text-white/70 mb-4">
+        <li data-i18n="footer.address.nepal">Pokhara Metropolitan City-4, Kaski, Gandaki, Nepal</li>
+        <li>977 61 570258</li>
+        <li>fewaeducation@gmail.com</li>
+      </ul>
+      <p class="text-mint-400 font-semibold text-xs uppercase tracking-wide mb-1.5" data-i18n="footer.japan.title">Japan Office</p>
+      <ul class="space-y-1.5 text-white/70">
+        <li data-i18n="footer.address.japan">Nishi Ward, Fukuoka, Japan</li>
+        <li>+81 80 3901 4835</li>
+        <li>info@fewaeducation.com.np</li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/50">
+      <p data-i18n="footer.copyright">© 2026 Fewa Kokusai Educational Consultancy Pvt. Ltd. All rights reserved. Content for informational purposes; visa outcomes are determined solely by the Embassy of Japan.</p>
+      <div class="flex items-center gap-4">
+        <span class="stamp px-3 py-1 text-[10px] font-bold text-mint-400" data-i18n="footer.badge">PATHWAY TO SUCCESS</span>
+        <a href="https://forms.gle/hXB4zRTCv4FULYE1A" target="_blank" rel="noopener" class="text-mint-400 font-semibold hover:underline" data-i18n="cta.apply">Apply Now</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- =========================================================
+     SCRIPTS
+     1) language.js  -> Japanese text dictionary (edit here)
+     2) main.js      -> small interactive behaviors
+========================================================= -->
+<script src="js/language.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
