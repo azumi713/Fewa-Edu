@@ -1236,6 +1236,7 @@ ul { list-style:none; }
   .md\:flex{display:flex}
   .md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
   .md\:grid-cols-5{grid-template-columns:repeat(5,minmax(0,1fr))}
+  
 }
 @media (min-width:1024px){
   .lg\:flex{display:flex}
@@ -1350,4 +1351,260 @@ input:focus, select:focus, textarea:focus{ box-shadow:0 0 0 3px var(--brand-blue
 .titleimg img {
     position: relative;
     z-index: 0;
+}
+.servicechater{
+    width: 95%;
+    border-radius: 6px;
+    display: inline-block;
+    text-align: center;
+  }
+  .en {
+    font-size: 7.5pt;
+    color: #64748b;
+    font-style: italic;
+    font-weight: normal;
+    display: block;
+    line-height: 1.2;
+    margin-top: 1px;
+  }
+
+  .en-inline {
+    font-size: 7.5pt;
+    color: #64748b;
+    font-style: italic;
+    font-weight: normal;
+  }
+
+  /* Header Section */
+  .header-card {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 12px 20px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    border-top: 6px solid #00a0e9;
+  }
+
+   .charter-cell {
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .company-title-np {
+    font-size: 18pt;
+    font-weight: bold;
+    color: #297c3e4d;
+    margin: 0;
+  }
+
+  .company-title-en {
+    font-size: 13pt;
+    font-weight: bold;
+    color: #00a0e9;
+    margin: 2px 0 0 0;
+  }
+
+  .estd-text {
+    font-size: 9.5pt;
+    color: #64748b;
+    font-weight: bold;
+  }
+
+  .charter-badge {   
+    color: #095579;
+    font-size: 20pt;
+    font-weight: bold;
+    padding: 8px 14px;
+    border-radius: 6px;
+    display: inline-block;
+    text-align: center;
+
+  }
+
+  .charter-sub {
+    color: #4894f8;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 4px;
+  }
+
+  /* Purpose Banner */
+  .purpose-banner {
+    background: linear-gradient(to right, #0f172a, #1e293b);
+    color: #ffffff;
+    padding: 10px 16px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    font-size: 11pt;
+  }
+
+  .purpose-banner span.banner-title {
+    color: #38bdf8;
+    font-weight: bold;
+  }
+
+  .section-header {
+    background-color: #e0f2fe;
+    color: #0369a1;
+    font-size: 13pt;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 4px;
+    border-left: 5px solid #00a0e9;
+    margin-bottom: 8px;
+    margin-top: 4px;
+  }
+
+  /* Main Table Styling */
+  table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 12px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+  }
+
+  table.data-table th {
+    background-color: #0f172a;
+    color: #ffffff;
+    font-size: 10.5pt;
+    font-weight: bold;
+    text-align: left;
+    padding: 8px 8px;
+    border: 1px solid #1e293b;
+  }
+
+  table.data-table td {
+    padding: 8px 8px;
+    border: 1px solid #e2e8f0;
+    font-size: 10pt;
+    vertical-align: top;
+  }
+
+  table.data-table tr:nth-child(even) {
+    background-color: #f8fafc;
+  }
+
+  ul, ol {
+    margin: 0;
+    padding-left: 14px;
+  }
+
+  li {
+    margin-bottom: 3px;
+  }
+
+  .tag-free {
+    background-color: #dcfce7;
+    color: #15803d;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 9.5pt;
+    text-align: center;
+  }
+
+  .tag-fee {
+    background-color: #fef3c7;
+    color: #b45309;
+    padding: 3px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 9.5pt;
+  }
+
+  /* Two Column Layout */
+  .grid-container {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    margin-bottom: 12px;
+  }
+
+  .grid-box {
+    display: table-cell;
+    width: 50%;
+    padding: 10px 14px;
+    vertical-align: top;
+    background-color: #ffffff;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+  }
+
+  .grid-box h3 {
+    margin: 0 0 8px 0;
+    font-size: 11.5pt;
+    color: #1b5e20;
+    border-bottom: 1.5px solid #dcfce7;
+    padding-bottom: 4px;
+  }
+
+  .payment-alert {
+    background-color: #fef2f2;
+    border: 1.5px solid #fca5a5;
+    border-radius: 6px;
+    padding: 8px 14px;
+    margin-bottom: 12px;
+    color: #991b1b;
+    font-size: 10.5pt;
+    font-weight: bold;
+  }
+
+  /* Contact Footer Box */
+  .contact-section {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 10px 14px;
+    border-top: 4px solid #00a0e9;
+  }
+
+  .contact-section h3 {
+    margin: 0 0 6px 0;
+    font-size: 11.5pt;
+    color: #0f172a;
+  }
+
+  .contact-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 10pt;
+  }
+
+  .contact-table td {
+    padding: 2px 6px;
+    vertical-align: top;
+    border: none;
+  }
+.data-table-scroll {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 8px;
+}
+
+.data-table-scroll table.data-table {
+  width: max-content;
+  min-width: 900px;
+  margin-bottom: 0;
+}
+
+/* Make only this table more compact */
+.data-table-scroll table.data-table th {
+  padding: 5px 7px;
+  font-size: 9.5pt;
+  line-height: 1.15;
+}
+
+.data-table-scroll table.data-table td {
+  padding: 5px 7px;
+  font-size: 9pt;
+  line-height: 1.2;
 }
